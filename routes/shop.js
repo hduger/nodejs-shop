@@ -7,7 +7,9 @@ const productsController = require('../controllers/shop');
 
 router.get('/', productsController.getIndex);
 router.get('/products', productsController.getProducts);
+router.get('/products/:productId', productsController.getProduct);
 router.get('/cart', productsController.getCart);
+router.post('/cart', productsController.postCart);
 router.get('/checkout', productsController.getCheckout);
 router.get('/orders', productsController.getOrders);
 
